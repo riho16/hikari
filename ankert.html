@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <link href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" rel="stylesheet">
+    <title>アンケート</title>
+    <style>
+      form {
+        padding: 0 1em;
+      }
+      .reset {
+        text-align: right;
+        margin-top: 20em;
+      }
+      .reset a {
+        color: #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <form onReset="return window.confirm('本当にリセットしますか？')">
+      <h1>アンケート</h1>
+      <p>補足説明〜〜〜</p>
+
+      <h2>単一選択な質問</h2>
+      <fieldset data-role="controlgroup">
+        <label>
+          <input type="radio" name="q1"> あん
+        </label>
+        <label>
+          <input type="radio" name="q1"> どぅ
+        </label>
+        <label>
+          <input type="radio" name="q1"> とろわ
+        </label>
+      </fieldset>
+
+      <h2>複数選択な質問</h2>
+      <fieldset data-role="controlgroup">
+        <label>
+          <input type="checkbox"> いっち
+        </label>
+        <label>
+          <input type="checkbox"> に
+        </label>
+        <label>
+          <input type="checkbox"> さーん
+        </label>
+      </fieldset>
+
+      <h2>選択肢多い質問</h2>
+      <select>
+        <option></option>
+        <option>One</option>
+        <option>Two</option>
+        <option>Three</option>
+        <option>Four</option>
+        <option>Five</option>
+      </select>
+
+      <p class="reset">
+        <a href="#" onClick="document.forms[0].reset(); return false;">
+          入力内容をリセットする
+        </a>
+      </p>
+    </form>
+  </body>
+</html>
