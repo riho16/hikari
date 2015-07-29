@@ -23,6 +23,21 @@
         color: #ccc;
       }
     </style>
+    
+    <script>
+    	// Q1 の回答内容によって違うページにジャンプする関数
+    	function go() {
+    		var q1Answer = document.forms[0].q0.value;
+    		
+    		if ( q1Answer == 'house' ) {
+    			location.href = 'https://www.google.co.jp/';
+    		}
+    		if ( q1Answer == 'apartment' ) {
+    			location.href = 'http://www.yahoo.co.jp/';
+    		}
+    	}
+    </script>
+    
 </head>
 
 <body>
@@ -59,10 +74,10 @@
         <!--　<p></p>　--> 
         <fieldset data-role="controlgroup">
 	<label>
-	<input type="radio" name="q0">戸建 
+	<input type="radio" name="q0" value="house">戸建 
         </label>
         <label>
-          <input type="radio" name="q0">マンション
+          <input type="radio" name="q0" value="apartment">マンション
         </label>       
 	 </fieldset>
 　　　　 <br><br>
@@ -244,6 +259,8 @@
 
 	<h4>アンケートのご協力ありがとうございました。</h4>
         <p>ドコモでは固定回線の新サービス「ドコモ光」が始まりました。携帯と固定回線とプロバイダをまとめてお得にご利用いただけます！</p>
+	
+	<button type="button" onClick="go()">Go</button>
 
  	<p class="reset">
         <a href="#" onClick="document.forms[0].reset(); return false;">
