@@ -130,11 +130,11 @@ h1 a {
 /*ナビゲーション
 ----------------------------------------------- */
 #nav {
-	width: 802px;
+	width: 820px;
 	margin-right: auto;
 	margin-left: auto;
 	background-image: url(img/nav.gif);
-	background-size:802px 45px;
+	background-size:820px 45px;
 	height: 36px;	
 	padding-top: 6px;
 }
